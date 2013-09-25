@@ -18,24 +18,9 @@ add-apt-repository -y ppa:chris-lea/node.js
 apt-get -y update
 apt-get -y install nodejs
 
-# rbenv & ruby-build
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.profile
-echo 'eval "$(rbenv init -)"' >> ~/.profile
-exec $SHELL -l
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-
-# ruby
-rbenv install 2.0.0-p247
-rbenv global 2.0.0-p247
-rbenv rehash
-
-# sqlite3 for rails environment
-apt-get -y install sqlite3 libsqlite3-dev
-
-# rails
-gem install rails
-rbenv rehash
+# run ruby related installation script as vagrant
+chmod u+x /vagrant/ruby.sh
+sudo -H -u vagrant /vagrant/ruby.sh
 
 # nginx & passenger
 add-apt-repository -y ppa:nginx/stable
