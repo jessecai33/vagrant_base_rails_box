@@ -18,13 +18,11 @@ add-apt-repository -y ppa:chris-lea/node.js
 apt-get -y update
 apt-get -y install nodejs
 
-# run ruby related installation script as vagrant
-chmod u+x /vagrant/ruby.sh
-sudo -H -u vagrant /vagrant/ruby.sh
+# sqlite3 for rails environment
+apt-get -y install sqlite3 libsqlite3-dev
 
 # nginx & passenger
 add-apt-repository -y ppa:nginx/stable
-
 gpg --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
 gpg --armor --export 561F9B9CAC40B2F7 | apt-key add -
 apt-get -y install apt-transport-https
@@ -53,3 +51,6 @@ sysv-rc-conf nginx on
 # start php-fpm & nginx
 service nginx start
 
+# run ruby related installation script as vagrant
+chmod u+x /vagrant/ruby.sh
+# sudo -H -u vagrant /vagrant/ruby.sh
