@@ -18,8 +18,9 @@ add-apt-repository -y ppa:chris-lea/node.js
 apt-get -y update
 apt-get -y install nodejs
 
-# sqlite3 for rails environment
+# sqlite3 & mysql dependency for rails environment
 apt-get -y install sqlite3 libsqlite3-dev
+apt-get -y install libmysqlclient-dev
 
 # nginx & passenger
 add-apt-repository -y ppa:nginx/stable
