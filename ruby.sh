@@ -1,9 +1,10 @@
 # rbenv
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.profile
-export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"
 echo 'eval "$(rbenv init -)"' >> ~/.profile
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
+source ~/.profile
 # exec $SHELL -l
 
 # ruby-build
