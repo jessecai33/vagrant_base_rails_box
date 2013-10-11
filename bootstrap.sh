@@ -23,6 +23,8 @@ apt-get -y install sqlite3 libsqlite3-dev
 apt-get -y install libmysqlclient-dev
 apt-get -y install libssl-dev
 
+# Run ruby.sh here to install Ruby related
+
 # nginx & passenger
 add-apt-repository -y ppa:nginx/stable
 gpg --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
