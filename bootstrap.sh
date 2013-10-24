@@ -8,6 +8,19 @@ apt-get -y update
 ln -sf /usr/share/zoneinfo/Australia/Sydney /etc/localtime
 # ln -sf /usr/share/zoneinfo/Asia/Singapore /etc/localtime
 
+# for newrelic
+# add following to  /etc/apt/sources.list
+# deb http://apt.newrelic.com/debian/ newrelic non-free
+
+wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add -
+
+apt-get -y update
+
+# New Relic
+apt-get -y install newrelic-sysmond
+nrsysmond-config --set license_key=XXXXXXXXXXXXXX
+/etc/init.d/newrelic-sysmond start
+
 # git
 apt-get -y install git-core
 
