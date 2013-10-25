@@ -36,7 +36,8 @@ apt-get -y install sqlite3 libsqlite3-dev
 apt-get -y install libmysqlclient-dev
 apt-get -y install libssl-dev
 
-# Run ruby.sh here to install Ruby related
+# Run ruby.sh here as normal user & root to  install Ruby related
+# root for deployments. normal user for passenger.
 
 # nginx & passenger
 add-apt-repository -y ppa:nginx/stable

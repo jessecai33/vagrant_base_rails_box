@@ -15,6 +15,11 @@ rbenv install 2.0.0-p247
 rbenv global 2.0.0-p247
 rbenv rehash
 
+# disable gem docs installation
+touch ~/.gemrc
+echo 'install: --no-rdoc --no-ri' >> ~/.gemrc
+echo 'update: --no-rdoc --no-ri' >> ~/.gemrc
+
 # rails
 gem install rails
 rbenv rehash
